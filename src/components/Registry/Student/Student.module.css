@@ -1,0 +1,71 @@
+@import url(../../../variables/css/color.css);
+@import url(../../../variables/css/size.css);
+
+.content {
+    padding-top: 100px;
+    margin-bottom: 70px;
+}
+
+.mycontain {
+    background-color: var(--white);
+    box-shadow: 0 2px 8px 3px rgb(0 0 0 / 5%);
+    width: 520px;
+    padding: 33px 70px;
+    margin: auto;
+    border-radius: 25px
+}
+
+.block-logo-student h2 {
+    display: block;
+    color: var(--black);
+    font-size: var(--fourth_font_size);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.block-student {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.block-student p, .block-pwd p {
+    display: block;
+    color: var(--black);
+    font-size: var(--standard_text);
+    font-weight: 400;
+}
+
+.block-bottom {
+    margin: 30px 0 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.student--forgotpwd {
+    display: block;
+    color: var(--black);
+    font-size: var(--standard_text);
+    font-weight: 400;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.forgotpwd-link, .reg-link {
+    color: var(--light_blue);
+    font-size: var(--standard_text);
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.mycontain--log {
+    display: block;
+    color: var(--black);
+    font-size: var(--standard_text);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+}

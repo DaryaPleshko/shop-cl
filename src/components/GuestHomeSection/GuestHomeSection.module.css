@@ -1,0 +1,62 @@
+@import url(../../variables/css/color.css);
+@import url(../../variables/css/size.css);
+
+.main {
+    background-color: #f3f3f3;
+    position: relative;
+    padding: 125px 20px;
+    border-bottom: 2px dashed black;
+}
+
+.end_contain {
+    border-top: 1px solid var(--light_gray);
+    width: 1200px;
+    margin: auto;
+}
+
+.mycontain {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sale {
+    background-color: #ffdd1b;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px dashed rgb(0, 0, 0);
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.left-info {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.left-info h1 {
+    margin-bottom: 20px;
+    color: var(--black);
+    font-size: var(--first_font_size);
+}
+
+.left-info p {
+    max-width: 450px;
+    margin-bottom: 20px;
+    color: var(--black);
+    font-size: var(--standard_text);
+}
+
+.img {
+    background-image: url(./assets/front-end.gif);
+    width: 40%;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: auto;
+}
