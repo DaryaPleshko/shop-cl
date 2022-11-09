@@ -2,10 +2,10 @@
 @import url(../../variables/css/size.css);
 
 .main {
-    background-color: #f3f3f3;
+    background-color: rgb(226 240 255 / 50%);
     position: relative;
     padding: 125px 20px;
-    border-bottom: 2px dashed black;
+    border-bottom: 1px dotted var(--light_blue);
 }
 
 .end_contain {
@@ -22,13 +22,20 @@
 }
 
 .sale {
-    background-color: #ffdd1b;
-    border-radius: 20px;
+    background-color: rgb(141 198 255 / 50%);
+    border-radius: 18px;
     text-align: center;
-    border: 2px dashed rgb(0, 0, 0);
+    border: 2px dashed var(--light_blue);
     padding: 10px 0;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.sale:hover {
+    background-color: rgba(108, 177, 246, 0.5);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--light_blue);
 }
 
 .left-info {

@@ -1,17 +1,17 @@
 import Footer from '../../components/Footer/Footer';
 import GuestHomeSection from '../../components/GuestHomeSection/GuestHomeSection';
 import Header from '../../components/Header/Header';
-import ListOfCourses from '../../components/ListOfCourses/ListOfCourses';
+import ListOfProducts from '../../components/ListOfProducts/ListOfProducts';
 
 const GuestHome = () => {
 
 
   return (
     <div>
-      <Header></Header>
-      <GuestHomeSection/>
-      <ListOfCourses />
-      <Footer></Footer>
+      <Header />
+      <GuestHomeSection />
+      <ListOfProducts />
+      <Footer />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import student from './Student.module.css';
-import { useRegisterMutation } from '../../../redux';
-import Loader from '../../Loader/Loader';
 import TextField from '@material-ui/core/TextField';
 import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
@@ -29,12 +27,6 @@ const Student = () => {
   const changeForm = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
-
-  const [register, { data, isLoading, isSuccess }] = useRegisterMutation();
-
-  if (isLoading) {
-    return <Loader />;
-  }
 
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
@@ -87,14 +79,7 @@ const Student = () => {
           <div className={student['block-bottom']}>
             <div
               onClick={async () => {
-                try {
-                  const result = await register(form);
-                  if (result.data) {
-                    navigate('/');
-                  }
-                } catch (err) {
-                  console.log(err);
-                }
+                navigate('/');
               }}
             >
               <Button variant="contained">Next</Button>

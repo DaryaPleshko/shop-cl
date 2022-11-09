@@ -1,16 +1,13 @@
 import { Link, useParams } from 'react-router-dom';
-import { useGetTopicsQuery } from '../../redux';
-import Loader from '../../components/Loader/Loader';
 import singleCourse from './SingleCourse.module.css';
-import TopicItem from './TopicItem';
 
 const SingleCourse = () => {
-  const { courseId, courseTitle } = useParams();
-  const { data: dataTopic, isLoading } = useGetTopicsQuery(`/topic/${courseId}`);
+  const { productTitle } = useParams();
 
-  if (isLoading) {
-    return <Loader />;
-  }
+  const dataTopic = [{
+    id: 1,
+    title: 'title'
+  }]
 
   return (
     <div className={singleCourse['course-wrapper']}>
@@ -18,7 +15,7 @@ const SingleCourse = () => {
         <div className={singleCourse['course-main-info']}>
           <div className={singleCourse['course-main-info-width']}>
             <p>Course</p>
-            <div className={singleCourse['course-name']}>{courseTitle}</div>
+            <div className={singleCourse['course-name']}>{productTitle}</div>
             <div className={singleCourse['course-count-student']}>65 students</div>
           </div>
         </div>
@@ -48,19 +45,12 @@ const SingleCourse = () => {
                 mobile phones, the internet - just about everything we deal with every day!
               </p>
             </div>
-            <div className={singleCourse['course-lessons']}>
-              <h2>Course Lessons</h2>
-              <p className={singleCourse['course-p-lessons']}>Duration 24 hours</p>
-              <ul>
-                {dataTopic ? dataTopic.map((item, index) => <TopicItem key={item.id} course={item} index={index + 1} {...item} />) : null}
-              </ul>
-            </div>
           </div>
 
           <div className={singleCourse['course-get-started']}>
             <div className={singleCourse['course-img']}></div>
             {dataTopic ? (
-              <Link to={`/course/${courseTitle}/${courseId}/${dataTopic[0].title}/${dataTopic[0].id}`}>
+              <Link to={`/course/${productTitle}/}`}>
                 <div className={singleCourse['course-btn']}>Continue</div>
               </Link>
             ) : null}

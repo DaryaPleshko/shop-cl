@@ -5,10 +5,6 @@ import { AuthContext } from '../../context/AuthContext';
 import TextField from '@material-ui/core/TextField';
 import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { useLoginMutation } from '../../redux';
-import Loader from '../Loader/Loader';
-import jwt_decode from 'jwt-decode';
-import SimpleSnackbar from '../SimpleSnackbar/SimpleSnackbar';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,16 +28,6 @@ const Login = () => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
-  const [login, { data, isLoading, isSuccess, isError }] = useLoginMutation();
-
-  if (isLoading) {
-    return <Loader />;
-  }
-
-  if (isSuccess) {
-    auth.login(data.token);
-  }
-
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -56,11 +42,6 @@ const Login = () => {
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
-  };
-
-  const decodeToken = (data) => {
-    const { role } = jwt_decode(data.token);
-    return role;
   };
 
   return (
@@ -105,18 +86,7 @@ const Login = () => {
             <Button
               variant="contained"
               onClick={async () => {
-                try {
-                  const result = await login(form);
-                  setForm('');
-                  if (result.data) {
-                    const role = decodeToken(result.data);
-                    if (role === 1) navigate('/course');
-                    else if (role === 2) navigate('/teacher');
-                    else if (role === 0) navigate('/admin');
-                  }
-                } catch (err) {
-                  console.log(err);
-                }
+                navigate('/course');
               }}
             >
               Log In
@@ -128,7 +98,6 @@ const Login = () => {
               <Button>Register</Button>
             </Link>
           </p>
-          {isError ? <SimpleSnackbar msg={'Not Found'} /> : null}
         </div>
       </div>
     </div>
