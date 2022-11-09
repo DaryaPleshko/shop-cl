@@ -1,8 +1,16 @@
 import { Link, useParams } from 'react-router-dom';
 import singleCourse from './SingleCourse.module.css';
+import products from '../../context/products';
 
 const SingleCourse = () => {
-  const { productTitle } = useParams();
+  const { id } = useParams();
+  let path;
+  console.log(id);
+
+  if (id) {
+    path = products.filter(el => el.id === id ? el.path : null)
+    console.log('path', path);
+  }
 
   const dataTopic = [{
     id: 1,
@@ -15,7 +23,7 @@ const SingleCourse = () => {
         <div className={singleCourse['course-main-info']}>
           <div className={singleCourse['course-main-info-width']}>
             <p>Course</p>
-            <div className={singleCourse['course-name']}>{productTitle}</div>
+            <div className={singleCourse['course-name']}>test</div>
             <div className={singleCourse['course-count-student']}>65 students</div>
           </div>
         </div>
@@ -48,9 +56,11 @@ const SingleCourse = () => {
           </div>
 
           <div className={singleCourse['course-get-started']}>
-            <div className={singleCourse['course-img']}></div>
+
+            <img className={singleCourse['course-img']} src={require(`../../storage/${path}`)}></img>
+
             {dataTopic ? (
-              <Link to={`/course/${productTitle}/}`}>
+              <Link to={`/course/${''}/}`}>
                 <div className={singleCourse['course-btn']}>Continue</div>
               </Link>
             ) : null}
