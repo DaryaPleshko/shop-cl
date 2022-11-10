@@ -1,13 +1,36 @@
 import style from './ShopBag.module.css';
 import { Button } from '@mui/material';
 import { orders } from '../../context/basket';
+import arrayProducts from '../../context/products';
+import SimpleSnackbar from '../SimpleSnackbar/SimpleSnackbar';
+import { useState } from 'react';
+
 
 const ShopBag = ({ title, path, price, setProducts, count }) => {
+    let [bool, setBool] = useState(false)
+    let [counts, setCounts] = useState(count)
 
     const deleteToBasket = () => {
         const filtered = orders.array.filter(el => title !== el.title ? el : null)
-        orders.array = filtered
+        orders.array = filtered;
         setProducts(orders.array)
+    }
+
+    const doPlus = () => {
+        const filtered = orders.array.filter(el => title === el.title ? el : null);
+        setCounts(++filtered[0].count)
+    }
+
+    const doMinus = () => {
+        const filtered = orders.array.filter(el => title === el.title ? el : null);
+        setCounts(--filtered[0].count)
+    }
+
+    const buyProduct = () => {
+        if (bool) {
+            setBool(false);
+            deleteToBasket()
+        } else setBool(true)
     }
 
     return (
@@ -20,29 +43,23 @@ const ShopBag = ({ title, path, price, setProducts, count }) => {
                         <div>
                             <h4>{title}</h4>
                             <p className={style['price']}>{`${price} $`}</p>
-
                             <div className={style['flex-content']}>
-                                <p className={style['count']}>-</p>
-                                <div className={style['count']}>{count}</div>
-                                <p className={style['count']}>+</p>
+                                <p className={style['count']} onClick={doMinus}>-</p>
+                                <div className={style['count']}>{counts}</div>
+                                <p className={style['count']} onClick={doPlus}>+</p>
                             </div>
-
                             <div className={style['flex-wrap']}>
                                 <div onClick={deleteToBasket}>
                                     <Button variant="text" color='error'>delete</Button>
                                 </div>
                                 <div>
-                                    <Button variant="text" color="primary">buy now</Button>
+                                    <Button onClick={buyProduct} variant="text" color="primary">buy now</Button>
                                 </div>
                             </div>
-
-
-
-
                         </div>
-
                     </div>
                 </div>
+                {bool ? <SimpleSnackbar msg="Вы успешно приобрели товар!" /> : null}
             </div>
         </div>
     );

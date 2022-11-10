@@ -6,11 +6,11 @@ import arrayProducts from '../../context/products';
 import { useState } from 'react';
 
 
-const ProductItem = ({ id, title, path, price, count }) => {
+const ProductItem = ({ title, path, price, count }) => {
   const [countPr, setCountPr] = useState(0)
 
   const addToBasket = () => {
-    const found = arrayProducts.filter(el => title === el.title)
+    const found = arrayProducts.filter(el => title === el.title);
     found[0].count++
     if (countPr === 0) orders.array.push(found[0])
     setCountPr(found[0].count)
@@ -20,7 +20,6 @@ const ProductItem = ({ id, title, path, price, count }) => {
     <div className={listOfProducts['shop']}>
       <div className={listOfProducts['color-line']}></div>
       <img className={listOfProducts['img-item']} src={require(`../../storage/${path}`)}></img>
-
       <h3>{title}</h3>
       <div className={listOfProducts['navigation']}>
         <p className={listOfProducts['price']}>{`${price} $`}</p>

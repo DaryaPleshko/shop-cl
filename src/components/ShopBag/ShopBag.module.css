@@ -66,12 +66,12 @@
 }
 
 .img-item {
-    width: 60%;
-    height: 40%;
+    width: 70%;
+    height: 50%;
     background-repeat: no-repeat;
     background-size: contain;
     transition: 1s;
-    margin-right: 50px;
+    margin: 20px 50px 0 0;
 }
 
 .shop:hover .img-item {
