@@ -19,7 +19,8 @@
 }
 
 .nav-links-center,
-.nav-links-right {
+.nav-links-right,
+.nav-links-center p{
     display: flex;
     padding-bottom: 2px;
     align-items: center;

@@ -6,7 +6,7 @@ import { useAuth } from '../../hooks/auth.hook';
 import { Button } from '@mui/material';
 
 const Header = () => {
-  let titles = ['About', 'Contacts', 'Basket',];
+  let titles = [{ title: 'About', url: '*' }, { title: 'Contacts', url: '*' }, { title: 'Basket', url: '/bag' }];
 
   const navigate = useNavigate();
   const { token, logout } = useAuth();
@@ -21,7 +21,7 @@ const Header = () => {
 
         <div className={header['nav-links-center']}>
           {titles.map((item, index) => (
-            <NavItem key={index} title={item} {...item} />
+            <NavItem key={index} url={item.url} title={item.title} {...item} />
           ))}
         </div>
 
