@@ -5,7 +5,7 @@ import data from '../../context/products';
 const ListOfProducts = () => {
   return (
     <div id='catalog-id' className={listOfProducts['shop-catalog']}>
-      {data && data.map((item) => <ProductItem key={item.id} id={item.id} title={item.title} path={item.path} price={item.price} {...item} />)}
+      {data && data.map((item) => <ProductItem key={item.id} id={item.id} title={item.title} path={item.path} price={item.price} count={item.count} {...item} />)}
     </div>
   );
 };

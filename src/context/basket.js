@@ -1,3 +1,3 @@
-const orders = [];
+let orders = { array: [] };
 
-export default orders;
+export { orders };

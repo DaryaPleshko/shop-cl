@@ -12,15 +12,11 @@
 }
 
 .nav-logo-link {
-    background-image: url(../assets/HS_logo_header.png);
-    width: 70px;
-    height: 69px;
     background-size: cover;
 }
 
 .nav-links-center,
-.nav-links-right,
-.nav-links-center p{
+.nav-links-right{
     display: flex;
     padding-bottom: 2px;
     align-items: center;
