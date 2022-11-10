@@ -2,7 +2,7 @@
     background-color: rgb(226 240 255 / 50%);
     position: relative;
     padding: 30px 20px;
-    border-bottom: 1px dotted var(--light_blue);
+    border-bottom: 1px dashed var(--light_blue);
 }
 
 .title {
@@ -10,6 +10,7 @@
     font-weight: 600;
     text-align: center;
     background-color: rgba(202, 202, 202, 0.368);
+    padding: 5px 0 5px 0;
 }
 
 .wrapper {
@@ -41,8 +42,21 @@
     height: 10px;
 }
 
+.flex-content {
+    display: flex;
+    justify-content: space-between;
+}
+
 .flex {
     display: flex;
+}
+
+.flex-wrap {
+    display: flex;
+}
+
+.flex-wrap :not(:first-child){
+    margin-left: 35px;
 }
 
 .shop h4 {
@@ -72,5 +86,5 @@
 
 .count {
     font-size: 18px;
-    margin: 122px 0 0 0;
+    cursor: pointer;
 }

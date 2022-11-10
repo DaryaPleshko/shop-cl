@@ -20,15 +20,27 @@ const ShopBag = ({ title, path, price, setProducts, count }) => {
                         <div>
                             <h4>{title}</h4>
                             <p className={style['price']}>{`${price} $`}</p>
-                            <div onClick={deleteToBasket}>
-                                <Button variant="text" color='error'>delete</Button>
+
+                            <div className={style['flex-content']}>
+                                <p className={style['count']}>-</p>
+                                <div className={style['count']}>{count}</div>
+                                <p className={style['count']}>+</p>
                             </div>
+
+                            <div className={style['flex-wrap']}>
+                                <div onClick={deleteToBasket}>
+                                    <Button variant="text" color='error'>delete</Button>
+                                </div>
+                                <div>
+                                    <Button variant="text" color="primary">buy now</Button>
+                                </div>
+                            </div>
+
+
+
+
                         </div>
-                        <div className={style['flex']}> 
-                            <p className={style['count']}>-</p>
-                            <div className={style['count']}>{count}</div>
-                            <p className={style['count']}>+</p>
-                        </div>
+
                     </div>
                 </div>
             </div>
