@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import GuestHome from '../pages/GuestHomePage/GuestHomePage';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
-import RegistrationStudentPage from '../pages/RegistrationStudentPage/RegistrationStudentPage';
+import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
 import SingleCoursePage from '../pages/SingleCoursePage/SingleCoursePage';
 import ShopBagPage from '../pages/ShopBagPage/ShopBagPage';
 
@@ -21,7 +21,7 @@ export const RoutesTest = (isAuthenticated) => {
       <Routes>
         <Route path="/" element={<GuestHome />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
-        <Route path="/register" element={<RegistrationStudentPage />}></Route>
+        <Route path="/register" element={<RegistrationPage />}></Route>
         <Route path="/product/:id/" element={<SingleCoursePage />}></Route>
         <Route path="/bag" element={<ShopBagPage />}></Route>
         <Route path="*" element={<NotFoundPage />}></Route>

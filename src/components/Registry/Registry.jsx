@@ -1,11 +1,11 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import student from './Student.module.css';
+import registry from './Registry.module.css';
 import TextField from '@material-ui/core/TextField';
 import { FormControl, Input, InputLabel, InputAdornment, IconButton, Button } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
-const Student = () => {
+const Registry = () => {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -45,13 +45,13 @@ const Student = () => {
   };
 
   return (
-    <div className={student['student']}>
-      <div className={student['content']}>
-        <div className={student['mycontain']}>
-          <div className={student['block-logo-student']}>
+    <div className={registry['student']}>
+      <div className={registry['content']}>
+        <div className={registry['mycontain']}>
+          <div className={registry['block-logo-student']}>
             <h2>Create your HS Student account</h2>
           </div>
-          <div className={student['block-student']}>
+          <div className={registry['block-student']}>
             <TextField name="name" onChange={changeForm} type="text" label="Name" />
             <TextField name="surname" onChange={changeForm} type="text" label="Surname" />
             <TextField name="email" onChange={changeForm} type="text" label="Email" />
@@ -76,7 +76,7 @@ const Student = () => {
               />
             </FormControl>
           </div>
-          <div className={student['block-bottom']}>
+          <div className={registry['block-bottom']}>
             <div
               onClick={async () => {
                 navigate('/');
@@ -85,15 +85,15 @@ const Student = () => {
               <Button variant="contained">Next</Button>
             </div>
           </div>
-          <p className={student['mycontain--log']}>
+          <p className={registry['mycontain--log']}>
             Already have an account?
-            <Link to={'/login'} className={student['reg-link']}>
+            <Link to={'/login'} className={registry['reg-link']}>
               Log In
             </Link>
           </p>
-          <p className={student['student--forgotpwd']}>
+          <p className={registry['student--forgotpwd']}>
             Looking to create a teacher account?
-            <Link to={'/register/teacher'} className={student['forgotpwd-link']}>
+            <Link to={'/register/teacher'} className={registry['forgotpwd-link']}>
               Click Here
             </Link>
           </p>
@@ -103,4 +103,4 @@ const Student = () => {
   );
 };
 
-export default Student;
+export default Registry;
