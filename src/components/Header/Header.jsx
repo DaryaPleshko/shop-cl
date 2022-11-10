@@ -16,7 +16,7 @@ const Header = () => {
     <header className={header['nav-desktop-sticky']}>
       <nav className={header['nav-desktop']}>
         <Link to={'/'}>
-          <div className={header['nav-logo-link']}>Sum-Store</div>
+          <h1 className={header['nav-logo-link']}>Sum-Store</h1>
         </Link>
 
         <div className={header['nav-links-center']}>

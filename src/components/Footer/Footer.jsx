@@ -12,16 +12,7 @@ const Footer = () => {
               About
             </Link>
             <Link to={'*'} className={footer['footer-links']}>
-              Programs
-            </Link>
-            <Link to={'*'} className={footer['footer-links']}>
-              Student Feedback
-            </Link>
-            <Link to={'*'} className={footer['footer-links']}>
-              Pricing
-            </Link>
-            <Link to={'*'} className={footer['footer-links']}>
-              Download
+              Clients Feedback
             </Link>
             <Link to={'*'} className={footer['footer-links']}>
               Careers
@@ -31,9 +22,9 @@ const Footer = () => {
             </Link>
           </div>
           <div className={footer['footer-cta-wrap']}>
-            <p className={footer['white']}>Stay focused on coding.</p>
+            <p className={footer['white']}>Stay tuned.</p>
             <Link to={'*'} className={footer['nav-btn']}>
-              Get started for free
+              Get started
             </Link>
           </div>
           <div className="div-block">
@@ -49,11 +40,11 @@ const Footer = () => {
               </Link>
             </div>
             <Link to={'*'} className="footer-logo-wrap w-inline-block w--current">
-              <div className={footer['footer-logo']}></div>
+            <h1 className={footer['nav-logo-link']}>Sum-Store</h1>
             </Link>
           </div>
         </div>
-        <div className={footer['small-caps']}>© HS 2022</div>
+        <div className={footer['small-caps']}>© Sum-Store 2022</div>
       </div>
     </div>
   );

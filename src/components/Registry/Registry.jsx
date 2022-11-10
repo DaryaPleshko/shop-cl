@@ -13,7 +13,7 @@ const Registry = () => {
     surname: '',
     email: '',
     password: '',
-    role: 1, // 1 - student, 2 - teacher, 0 - admin
+    role: 1, 
   });
 
   const [values, setValues] = useState({
@@ -45,13 +45,13 @@ const Registry = () => {
   };
 
   return (
-    <div className={registry['student']}>
+    <div className={registry['client']}>
       <div className={registry['content']}>
         <div className={registry['mycontain']}>
-          <div className={registry['block-logo-student']}>
-            <h2>Create your HS Student account</h2>
+          <div className={registry['block-logo-client']}>
+            <h2>Create your account</h2>
           </div>
-          <div className={registry['block-student']}>
+          <div className={registry['block-client']}>
             <TextField name="name" onChange={changeForm} type="text" label="Name" />
             <TextField name="surname" onChange={changeForm} type="text" label="Surname" />
             <TextField name="email" onChange={changeForm} type="text" label="Email" />
@@ -89,12 +89,6 @@ const Registry = () => {
             Already have an account?
             <Link to={'/login'} className={registry['reg-link']}>
               Log In
-            </Link>
-          </p>
-          <p className={registry['student--forgotpwd']}>
-            Looking to create a teacher account?
-            <Link to={'/register/teacher'} className={registry['forgotpwd-link']}>
-              Click Here
             </Link>
           </p>
         </div>

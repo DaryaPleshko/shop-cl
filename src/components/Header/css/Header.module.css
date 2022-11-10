@@ -12,7 +12,9 @@
 }
 
 .nav-logo-link {
-    background-size: cover;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 18px;
 }
 
 .nav-links-center,

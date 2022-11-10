@@ -15,7 +15,7 @@
     border-radius: 25px
 }
 
-.block-logo-student h2 {
+.block-logo-client h2 {
     display: block;
     color: var(--black);
     font-size: var(--fourth_font_size);
@@ -24,14 +24,14 @@
     margin-bottom: 20px;
 }
 
-.block-student {
+.block-client {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
 }
 
-.block-student p, .block-pwd p {
+.block-client p, .block-pwd p {
     display: block;
     color: var(--black);
     font-size: var(--standard_text);

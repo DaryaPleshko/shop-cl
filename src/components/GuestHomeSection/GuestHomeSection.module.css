@@ -65,5 +65,5 @@
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-right: auto;
+    margin: auto 35px;
 }
