@@ -40,7 +40,7 @@ const Header = () => {
           <div
             onClick={() => {
               logout();
-              navigate('/');
+              navigate('/');    
             }}
             className={header['nav-links-right']}
           >

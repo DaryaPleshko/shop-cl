@@ -19,7 +19,7 @@ const ShopBag = ({ title, path, price, setProducts, count }) => {
     const doPlus = () => {
         const filtered = orders.array.filter(el => title === el.title ? el : null);
         setCounts(++filtered[0].count)
-    }
+    }    
 
     const doMinus = () => {
         const filtered = orders.array.filter(el => title === el.title ? el : null);
