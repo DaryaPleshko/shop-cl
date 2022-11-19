@@ -1,2 +1,1 @@
-# product-app
-Hardware Store
+# Hardware Store
