@@ -1,0 +1,6 @@
+.main {
+    background-color: rgb(226 240 255 / 50%);
+    position: relative;
+    padding: 30px 20px;
+    border-bottom: 1px dashed var(--light_blue);
+}

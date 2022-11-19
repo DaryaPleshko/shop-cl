@@ -6,7 +6,7 @@ import { useAuth } from '../../hooks/auth.hook';
 import { Button } from '@mui/material';
 
 const Header = () => {
-  let titles = [{ title: 'About', url: '*' }, { title: 'Contacts', url: '*' }, { title: 'Basket', url: '/bag' }];
+  let titles = [{ title: 'About', url: '/about' }, { title: 'Contacts', url: '*' }, { title: 'Basket', url: '/bag' }];
 
   const navigate = useNavigate();
   const { token, logout } = useAuth();
