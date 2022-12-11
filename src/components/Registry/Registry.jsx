@@ -13,7 +13,7 @@ const Registry = () => {
     surname: '',
     email: '',
     password: '',
-    role: 1, 
+    role: 1,               
   });
 
   const [values, setValues] = useState({
