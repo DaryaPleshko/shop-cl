@@ -5,7 +5,7 @@ const AboutStore = () => {
     return (
         <div className={style['main']}>
             <div className={style['container']}>
-                <div className={style['title']}>ABOUT US</div>
+                <div className={style['title']}>ABOUT US</div>          
                 <div className={style['flex']}>
                     <div>
                         <div className={style['first']}></div>
