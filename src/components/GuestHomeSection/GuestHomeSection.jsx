@@ -6,7 +6,7 @@ const GuestHomeSection = () => {
     <div className={classNames(main['main'])}>
       <div className={classNames(main['mycontain'])}>
         <div className={main['left-info']}>
-          <a href='#catalog-id'>
+          <a href='#catalog-id'>           
             <div className={main['sale']}>11.11 the biggest sale in the history of our store</div>
           </a>
           <div>
